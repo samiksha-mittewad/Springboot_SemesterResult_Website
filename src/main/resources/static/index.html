@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VIT Semester Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>VIT Semester Result Calculator</h1>
+        <p class="subtitle">
+            Calculate your semester result using MSE (30%) and ESE (70%) marks
+        </p>
+
+        <form id="resultForm">
+
+            <!-- Student Details -->
+            <div class="card">
+                <h2>Student Details</h2>
+
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="studentId">Student ID</label>
+                    <input
+                        type="text"
+                        id="studentId"
+                        placeholder="Enter student ID"
+                        required
+                    >
+                </div>
+            </div>
+
+
+            <!-- Subject Marks -->
+            <div class="card">
+
+                <h2>Enter Subject Marks</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>MSE Marks<br>(Out of 30)</th>
+                            <th>ESE Marks<br>(Out of 70)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Web Technologies</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="wtMse"
+                                    min="0"
+                                    max="30"
+                                    required
+                                >
+                            </td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="wtEse"
+                                    min="0"
+                                    max="70"
+                                    required
+                                >
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Data Structures and Algorithms</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="dsaMse"
+                                    min="0"
+                                    max="30"
+                                    required
+                                >
+                            </td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="dsaEse"
+                                    min="0"
+                                    max="70"
+                                    required
+                                >
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Database Management Systems</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="dbmsMse"
+                                    min="0"
+                                    max="30"
+                                    required
+                                >
+                            </td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="dbmsEse"
+                                    min="0"
+                                    max="70"
+                                    required
+                                >
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Object Oriented Programming</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="oopMse"
+                                    min="0"
+                                    max="30"
+                                    required
+                                >
+                            </td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="oopEse"
+                                    min="0"
+                                    max="70"
+                                    required
+                                >
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <button type="submit">
+                Calculate & Save Result
+            </button>
+
+        </form>
+
+
+        <!-- Result will appear here -->
+        <div id="resultSection" class="card result-section">
+
+            <h2>Semester Result</h2>
+
+            <p id="resultMessage">
+                Enter marks and click Calculate & Save Result.
+            </p>
+
+            <div id="resultTableContainer"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
