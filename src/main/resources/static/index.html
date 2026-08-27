@@ -4,181 +4,302 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VIT Semester Result</title>
+    <title>VIT Semester Result Portal</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- Top Header -->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-logo">VIT</div>
+            <div>
+                <h1>Semester Result Portal</h1>
+                <p>Vishwakarma Institute of Technology, Pune</p>
+            </div>
+        </div>
 
-        <h1>VIT Semester Result Calculator</h1>
-        <p class="subtitle">
-            Calculate your semester result using MSE (30%) and ESE (70%) marks
-        </p>
+        <div class="semester-badge">
+            Academic Result System
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Page Introduction -->
+        <section class="hero">
+            <div>
+                <p class="eyebrow">STUDENT RESULT MANAGEMENT</p>
+                <h2>Calculate your semester result</h2>
+                <p class="subtitle">
+                    Enter your MSE and ESE marks for four subjects to calculate
+                    your subject-wise results and overall semester percentage.
+                </p>
+            </div>
+
+            <div class="marks-info">
+                <div class="mark-box">
+                    <span>MSE</span>
+                    <strong>30</strong>
+                    <small>Marks</small>
+                </div>
+
+                <div class="mark-box">
+                    <span>ESE</span>
+                    <strong>70</strong>
+                    <small>Marks</small>
+                </div>
+
+                <div class="mark-box">
+                    <span>Total</span>
+                    <strong>100</strong>
+                    <small>Marks</small>
+                </div>
+            </div>
+        </section>
+
 
         <form id="resultForm">
 
             <!-- Student Details -->
-            <div class="card">
-                <h2>Student Details</h2>
+            <section class="card">
 
-                <div class="input-group">
-                    <label for="studentName">Student Name</label>
-                    <input
-                        type="text"
-                        id="studentName"
-                        placeholder="Enter student name"
-                        required
-                    >
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">STEP 01</p>
+                        <h2>Student Details</h2>
+                    </div>
+                    <span class="section-icon">01</span>
                 </div>
 
-                <div class="input-group">
-                    <label for="studentId">Student ID</label>
-                    <input
-                        type="text"
-                        id="studentId"
-                        placeholder="Enter student ID"
-                        required
-                    >
+                <div class="student-fields">
+
+                    <div class="input-group">
+                        <label for="studentName">Student Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="studentId">Student ID</label>
+                        <input
+                            type="text"
+                            id="studentId"
+                            placeholder="Enter student ID"
+                            required
+                        >
+                    </div>
+
                 </div>
-            </div>
+
+            </section>
 
 
             <!-- Subject Marks -->
-            <div class="card">
+            <section class="card">
 
-                <h2>Enter Subject Marks</h2>
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">STEP 02</p>
+                        <h2>Subject Marks</h2>
+                        <p class="section-description">
+                            Enter MSE marks out of 30 and ESE marks out of 70.
+                        </p>
+                    </div>
+                    <span class="section-icon">02</span>
+                </div>
 
-                <table>
+                <div class="table-wrapper">
 
-                    <thead>
-                        <tr>
-                            <th>Subject</th>
-                            <th>MSE Marks<br>(Out of 30)</th>
-                            <th>ESE Marks<br>(Out of 70)</th>
-                        </tr>
-                    </thead>
+                    <table class="marks-table">
 
-                    <tbody>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>
+                                    MSE
+                                    <span>Out of 30</span>
+                                </th>
+                                <th>
+                                    ESE
+                                    <span>Out of 70</span>
+                                </th>
+                            </tr>
+                        </thead>
 
-                        <tr>
-                            <td>Web Technologies</td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="wtMse"
-                                    min="0"
-                                    max="30"
-                                    required
-                                >
-                            </td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="wtEse"
-                                    min="0"
-                                    max="70"
-                                    required
-                                >
-                            </td>
-                        </tr>
+                        <tbody>
 
-                        <tr>
-                            <td>Data Structures and Algorithms</td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="dsaMse"
-                                    min="0"
-                                    max="30"
-                                    required
-                                >
-                            </td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="dsaEse"
-                                    min="0"
-                                    max="70"
-                                    required
-                                >
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <span class="subject-number">01</span>
+                                    Web Technologies
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="wtMse"
+                                        min="0"
+                                        max="30"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="wtEse"
+                                        min="0"
+                                        max="70"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Database Management Systems</td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="dbmsMse"
-                                    min="0"
-                                    max="30"
-                                    required
-                                >
-                            </td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="dbmsEse"
-                                    min="0"
-                                    max="70"
-                                    required
-                                >
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <span class="subject-number">02</span>
+                                    Data Structures and Algorithms
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="dsaMse"
+                                        min="0"
+                                        max="30"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="dsaEse"
+                                        min="0"
+                                        max="70"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Object Oriented Programming</td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="oopMse"
-                                    min="0"
-                                    max="30"
-                                    required
-                                >
-                            </td>
-                            <td>
-                                <input
-                                    type="number"
-                                    id="oopEse"
-                                    min="0"
-                                    max="70"
-                                    required
-                                >
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <span class="subject-number">03</span>
+                                    Database Management Systems
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="dbmsMse"
+                                        min="0"
+                                        max="30"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="dbmsEse"
+                                        min="0"
+                                        max="70"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                            </tr>
 
-                    </tbody>
+                            <tr>
+                                <td>
+                                    <span class="subject-number">04</span>
+                                    Object Oriented Programming
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="oopMse"
+                                        min="0"
+                                        max="30"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        id="oopEse"
+                                        min="0"
+                                        max="70"
+                                        placeholder="0"
+                                        required
+                                    >
+                                </td>
+                            </tr>
 
-                </table>
+                        </tbody>
 
-            </div>
+                    </table>
+
+                </div>
+
+            </section>
 
 
-            <button type="submit">
-                Calculate & Save Result
-            </button>
+            <!-- Submit Section -->
+            <section class="submit-section">
+
+                <div>
+                    <h3>Ready to generate the result?</h3>
+                    <p>
+                        The calculated result will be displayed below and saved
+                        to the database.
+                    </p>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Calculate & Save Result
+                    <span>→</span>
+                </button>
+
+            </section>
 
         </form>
 
 
-        <!-- Result will appear here -->
-        <div id="resultSection" class="card result-section">
+        <!-- Result Section -->
+        <section id="resultSection" class="card result-section">
 
-            <h2>Semester Result</h2>
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">RESULT</p>
+                    <h2>Semester Result</h2>
+                </div>
+                <span class="section-icon">✓</span>
+            </div>
 
             <p id="resultMessage">
-                Enter marks and click Calculate & Save Result.
+                Enter the required details and marks to generate the semester result.
             </p>
 
             <div id="resultTableContainer"></div>
 
-        </div>
+        </section>
 
-    </div>
+    </main>
+
+
+    <footer>
+        <p>VIT Semester Result Portal</p>
+        <p>Web Technologies Assignment</p>
+    </footer>
 
 
     <script src="script.js"></script>
