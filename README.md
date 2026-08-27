@@ -25,26 +25,27 @@ A responsive web application developed to calculate and manage a student's semes
 - **Backend:** Java, Spring Boot
 - **Database:** MySQL
 - **Build Tool:** Maven
-
 ## Screenshots
 
 ### Result Calculator
 
-Enter student details and marks for four subjects through a responsive marks-entry interface.
+The application provides a responsive interface for entering student details and MSE/ESE marks for four subjects.
 
 ![Result Calculator](images/result-calculator.png)
 
 ### Calculated Semester Result
 
-The application displays subject-wise totals, grades, overall marks, percentage, and semester status after calculation.
+After submission, the application calculates subject-wise totals, grades, overall marks, percentage, and pass status.
 
 ![Semester Result](images/semester-result.png)
 
 ### MySQL Database Storage
 
-The submitted student result and subject-wise marks are stored successfully in the MySQL database.
+The calculated student and subject results are successfully stored in the MySQL database through the Spring Boot backend.
 
 ![MySQL Database](images/mysql-database.png)
+
+
 
 ## Project Structure
 
